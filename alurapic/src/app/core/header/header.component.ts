@@ -11,12 +11,10 @@ export class HeaderComponent {
 
   // a variavel com tqm "$" na frente significa dizer que esse valor recebe um observable
   user$: Observable<User>;
-  user: User;
 
   constructor(userService: UserService) {
 
     this.user$ = userService.getUser();
-    this.user$.subscribe(user => this.user = user);
   }
 
 }
